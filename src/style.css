@@ -1,0 +1,102 @@
+/* Pretendard 웹폰트 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.css');
+
+/* ============================
+   디자인 토큰 — Tripick 어스톤 / 프리미엄 팔레트
+   ============================ */
+:root {
+  /* Primary */
+  --c-primary:      #1D6FBF;
+  --c-primary-bg:   #E7EFF9;
+  --c-primary-text: #1B2540;
+
+  /* 배경 */
+  --c-bg:      #EBF6FD;   /* 앱 기본 배경 */
+  --c-surface: #ffffff;   /* 카드/입력 배경 */
+
+  /* 텍스트 */
+  --c-text:        #1F2D2C;  /* 본문 */
+  --c-text-sub:    #6D7A75;  /* 보조 */
+  --c-text-muted:  #9FACA6;  /* 비활성 */
+  --c-text-label:  #5C6B65;  /* 라벨 */
+
+  /* 보더 */
+  --c-border:      #E4EFEE;
+
+  /* 태그 배경 */
+  --c-tag-gray:   #EEF1EE;
+  --c-tag-teal:   #EEF6F5;
+
+  /* 상태 */
+  --c-star:    #E8B84B;
+  --c-success: #7FB58F;
+  --c-error:   #ef4444;
+
+  /* 소셜 */
+  --c-kakao:  #FEE500;
+  --c-naver:  #03C75A;
+
+  /* 레이아웃 */
+  --nav-height:    60px;
+  --header-height: 52px;
+  --max-width:     480px;
+
+  /* 보더 반경 */
+  --r-pill:    99px;
+  --r-card:    20px;
+  --r-card-sm: 14px;
+  --r-btn:     14px;
+  --r-input:   14px;
+  --r-tag:     8px;
+
+  /* 그림자 */
+  --shadow-card: 0 6px 20px rgba(42, 39, 34, 0.10);
+  --shadow-screen: 0 10px 34px rgba(42, 39, 34, 0.12);
+}
+
+/* ============================
+   리셋
+   ============================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::-webkit-scrollbar { display: none; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--c-text);
+  background: var(--c-bg);
+}
+
+#app {
+  min-height: 100dvh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: 'Pretendard', sans-serif;
+}
+
+p { margin: 0; }
+a { text-decoration: none; color: inherit; }
