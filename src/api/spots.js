@@ -22,4 +22,9 @@ export const spotApi = {
   // 내 여행지 찜 목록: { page, size }
   getMyBookmarks: (params) =>
     api.get('/api/spot-bookmarks', { params }),
+
+  // 내 주변 여행지: { lat, lng, radiusKm, page, size }
+  // TravelSpotNearbyResponse: { spotId, name, region, category, imageUrl, latitude, longitude, distanceKm }
+  getNearby: (params) =>
+    api.get('/api/travel-spots/nearby', { params }),
 }

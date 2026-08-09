@@ -38,4 +38,14 @@ export const festivalApi = {
   // 후기 삭제
   deleteReview: (festivalId, reviewId) =>
     api.delete(`/api/festivals/${festivalId}/reviews/${reviewId}`),
+
+  // 내가 쓴 후기 목록: { page, size }
+  // MyReviewResponse: { reviewId, festivalId, festivalName, festivalImageUrl, rating, content, createdAt }
+  getMyReviews: (params) =>
+    api.get('/api/reviews/me', { params }),
+
+  // 내 주변 축제: { lat, lng, radiusKm, page, size }
+  // FestivalNearbyResponse: { festivalId, name, startDate, endDate, region, category, imageUrl, latitude, longitude, distanceKm }
+  getNearby: (params) =>
+    api.get('/api/festivals/nearby', { params }),
 }
