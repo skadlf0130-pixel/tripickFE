@@ -109,6 +109,7 @@ const ICON_MAP = {
           <div class="unread-dot" :class="{ visible: !n.isRead }" />
           <div class="notif-icon">{{ ICON_MAP[n.type] ?? '🔔' }}</div>
           <div class="notif-body">
+            <p v-if="n.title" class="notif-title">{{ n.title }}</p>
             <p class="notif-msg">{{ n.content }}</p>
             <p class="notif-time">{{ relativeTime(n.createdAt) }}</p>
           </div>
@@ -127,6 +128,7 @@ const ICON_MAP = {
           <div class="unread-dot" :class="{ visible: !n.isRead }" />
           <div class="notif-icon">{{ ICON_MAP[n.type] ?? '🔔' }}</div>
           <div class="notif-body">
+            <p v-if="n.title" class="notif-title">{{ n.title }}</p>
             <p class="notif-msg">{{ n.content }}</p>
             <p class="notif-time">{{ relativeTime(n.createdAt) }}</p>
           </div>
@@ -235,9 +237,15 @@ const ICON_MAP = {
 }
 
 .notif-body { flex: 1; min-width: 0; }
-.notif-msg {
+.notif-title {
   font-size: 14px;
+  font-weight: 700;
   color: var(--c-text);
+  margin-bottom: 2px;
+}
+.notif-msg {
+  font-size: 13px;
+  color: var(--c-text-sub);
   line-height: 1.5;
   margin-bottom: 4px;
 }
